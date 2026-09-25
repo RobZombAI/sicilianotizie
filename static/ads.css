@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════════════
+   SICILIA NOTIZIE — Google AdSense Style
+   12 ads total: 6 homepage + 6 article page
+   ═══════════════════════════════════════════════ */
+
+/* ── Universal Ad Container ───────────────── */
+.ad {
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    position: relative;
+}
+
+.ad-label {
+    display: block;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.08);
+    margin-bottom: 0.15rem;
+    font-weight: 400;
+}
+
+.ad-label-dark {
+    color: rgba(0,0,0,0.08);
+}
+
+/* ── Homepage Ads (6) ─────────────────────── */
+
+/* Ad #1: After Hero section, full-width */
+.ad-home-hero-bottom {
+    margin: 1.5rem auto 2rem;
+    max-width: 970px;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ad #2 & #4: In-feed between articles */
+.ad-home-infeed {
+    margin: 0;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    grid-column: 1 / -1;
+    max-width: 100%;
+}
+
+/* Ad #3 & #5: Sidebar */
+.ad-home-sidebar {
+    margin: 0.5rem 0;
+    min-height: 250px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.ad-home-sidebar-tall {
+    min-height: 600px;
+}
+
+/* Ad #6: Footer banner */
+.ad-home-footer {
+    margin: 2rem auto 0;
+    max-width: 970px;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* ── Article Page Ads (6) ─────────────────── */
+
+/* Ad #1: Below article hero image */
+.ad-article-top {
+    margin: 0 auto 1.5rem;
+    max-width: 728px;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ad #2: Mid-content (after first section) */
+.ad-article-mid {
+    margin: 2rem auto;
+    max-width: 728px;
+    min-height: 250px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ad #3: After article body, before tags */
+.ad-article-bottom {
+    margin: 2rem auto 1rem;
+    max-width: 728px;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ad #4: Between related articles */
+.ad-article-related {
+    margin: 1.5rem auto;
+    max-width: 728px;
+    min-height: 90px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Ad #5: Sidebar */
+.ad-article-sidebar {
+    margin: 0.5rem 0;
+    min-height: 250px;
+    background: rgba(255,255,255,0.015);
+    border-radius: var(--radius);
+    border: 1px dashed rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.ad-article-sidebar-tall {
+    min-height: 600px;
+}
+
+/* Ad #6: Sticky footer (closable) */
+.ad-sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(11, 13, 17, 0.97);
+    border-top: 1px solid var(--border);
+    padding: 0.5rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.3s ease;
+}
+
+.ad-sticky-footer.closed {
+    transform: translateY(100%);
+}
+
+.ad-sticky-close {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    line-height: 1;
+    z-index: 1;
+    transition: color 0.2s;
+}
+
+.ad-sticky-close:hover {
+    color: var(--accent);
+}
+
+.ad-sticky-inner {
+    max-width: 970px;
+    margin: 0 auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ad-home-sidebar-tall { min-height: 250px; }
+    .ad-article-sidebar-tall { min-height: 250px; }
+    .ad-article-mid { min-height: 120px; }
+    .ad-sticky-footer { padding: 0.3rem; }
+}

@@ -5,6 +5,54 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://robzombai.github.io/sicilianotizie/cronaca</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/politica</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/economia</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/giustizia</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/ambiente</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/sanita</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/chi-siamo</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/contatti</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/pubblicita</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/note-legali</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://robzombai.github.io/sicilianotizie/cerca/</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://robzombai.github.io/sicilianotizie/provincia/agrigento</loc>
     <priority>0.6</priority>
   </url>

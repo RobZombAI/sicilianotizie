@@ -852,7 +852,60 @@ a:hover{color:var(--accent)}
     margin-top:1.6rem;
 }
 
+/* ════════════════════════════════════════════
+   ANTEPRIMA CLICCABILE
+   Tutta la scheda apre l'articolo, non solo il titolo: il link
+   del titolo si allarga a coprire la scheda, mentre i link
+   interni (sezione, provincia, tema) restano cliccabili sopra.
+   ════════════════════════════════════════════ */
+.article-card, .hero-card, .related-card{position:relative;cursor:pointer}
+
+.article-card .card-title a:after,
+.hero-card .hero-card-title a:after,
+.related-card .related-title a:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+
+/* L'apertura della prima pagina: qui il titolo sta dentro un riquadro posizionato,
+   quindi l'area cliccabile è un link vuoto che copre tutto il riquadro. */
+.hero-main .hero-main-link{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    border-radius:inherit;
+}
+.hero-main .hero-main-overlay{z-index:2;pointer-events:none}
+.hero-main .hero-main-overlay a{pointer-events:auto}
+
+/* i link che stanno dentro la scheda vanno sopra l'area cliccabile */
+.article-card .card-meta a,
+.article-card .card-footer a,
+.hero-card .hero-card-meta a,
+.related-card .related-meta a,
+.hero-main .hero-main-meta a{
+    position:relative;
+    z-index:2;
+}
+
+/* il titolo si accende anche quando il puntatore è altrove sulla scheda */
+.article-card:hover .card-title a,
+.hero-card:hover .hero-card-title a,
+.related-card:hover .related-title a,
+.hero-main:hover .hero-main-title a{color:var(--accent)}
+
+/* da tastiera l'area cliccabile non deve nascondere il contorno del link */
+.article-card .card-title a:focus-visible:after,
+.hero-card .hero-card-title a:focus-visible:after,
+.related-card .related-title a:focus-visible:after,
+.hero-main .hero-main-title a:focus-visible:after{outline:2px solid var(--accent);outline-offset:3px}
+
 @media (max-width:768px){
+    /* su telefono la scheda è già tutta un bersaglio: niente ombre in più */
+    .article-card .card-title a:after,
+    .hero-card .hero-card-title a:after{box-shadow:none}
     .inbreve{padding:0.9rem 1rem;margin-bottom:1.4rem}
     .article-byline{font-size:0.78rem}
     .info-testo{font-size:0.98rem}
